@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+    <script defer 
+    src="https://use.fontawesome.com/releases/v5.0.9/js/all.js" integrity="sha384-8iPTk2s/jMVj81dnzb/iFR2sdA7u06vHJyyLlAd4snFpCl/SnyUjRrbdJsw1pGIl" 
+    crossorigin="anonymous">
+    </script>
+    <title>TravelApp</title>
+</head>
+<body>
+    <header class="navbar-fixed">
+        <nav class="teal">
+            <div class="container">
+                <div class="wrapper">
+                    <a href="#" class="brand-logo">Travelville</a>
+                    <a href="#" class="sidenav-trigger" data-target="mobile-nav">
+                        <i class="material-icons">menu</i>
+                    </a>
+                    <ul class="right hide-on-med-and-down">
+                        <li>
+                            <a href="#home">Home</a>
+                        </li>
+                        <li>
+                            <a href="#search">Search</a>
+                        </li>
+                        <li>
+                            <a href="#popular">Popular Places</a>
+                        </li>
+                        <li>
+                            <a href="#gallery">Gallery</a>
+                        </li>
+                        <li>
+                            <a href="#contact">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <ul id="mobile-nav" class="sidenav">
+        <li>
+            <a href="#home">Home</a>
+        </li>
+        <li>
+            <a href="#search">Search</a>
+        </li>
+        <li>
+            <a href="#popular">Popular Places</a>
+        </li>
+        <li>
+            <a href="#gallery">Gallery</a>
+        </li>
+        <li>
+            <a href="#contact">Contact</a>
+        </li>
+    </ul>
+
+    <section class="slider">
+        
+    </section>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+    <script>
+        const sidenav = document.querySelector('.sidenav');
+        M.Sidenav.init(sidenav, {});
+    </script>
+</body>
+</html>
