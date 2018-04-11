@@ -6,13 +6,14 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+    <link rel="stylesheet" href="css/style.css">
     <script defer 
     src="https://use.fontawesome.com/releases/v5.0.9/js/all.js" integrity="sha384-8iPTk2s/jMVj81dnzb/iFR2sdA7u06vHJyyLlAd4snFpCl/SnyUjRrbdJsw1pGIl" 
     crossorigin="anonymous">
     </script>
     <title>TravelApp</title>
 </head>
-<body>
+<body id="home" class="scrollspy">
     <header class="navbar-fixed">
         <nav class="teal">
             <div class="container">
@@ -62,13 +63,68 @@
     </ul>
 
     <section class="slider">
-        
+        <ul class="slides">
+            <li>
+                <img src="img/resort1.jpg"> <!-- random image -->
+                <div class="caption center-align">
+                <h3>Take Your Dream Vacation!</h3>
+                <h5 class="light grey-text text-lighten-3 hide-on-small-only">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum, veritatis! Perspiciatis hic sed eligendi dolor consequuntur.</h5>
+                </div>
+            </li>
+            <li>
+                <img src="img/resort2.jpg"> <!-- random image -->
+                <div class="caption left-align">
+                <h3>We Work With All Budgets</h3>
+                <h5 class="light grey-text text-lighten-3 hide-on-small-only">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum, veritatis! Perspiciatis hic sed eligendi dolor consequuntur.</h5>
+                </div>
+            </li>
+            <li>
+                <img src="img/resort3.jpg"> <!-- random image -->
+                <div class="caption right-align">
+                <h3>Group and Individual Getaways</h3>
+                <h5 class="light grey-text text-lighten-3 hide-on-small-only">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum, veritatis! Perspiciatis hic sed eligendi dolor consequuntur.</h5>
+                </div>
+            </li>
+        </ul>
+    </section>
+
+    <section id="search" class="section section-search teal darken-1 white-text center scrollspy">
+        <div class="container">
+            <div class="row">
+                <div class="col-s12">
+                    <h3>Search Destinations</h3>
+                    <div class="input-field">
+                        <input type="text" id="autocomplete-input" class="white grey-text autocomplete" placeholder="Aruba, Cancun, etc...">
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
     <script>
         const sidenav = document.querySelector('.sidenav');
         M.Sidenav.init(sidenav, {});
+
+        const slider = document.querySelector('.slider');
+        M.Slider.init(slider, {
+            indicators: false,
+            height: 500,
+            transition: 500,
+            interval: 6000
+        });
+
+        const autocomplete = document.querySelector('.autocomplete');
+        M.Autocomplete.init(autocomplete, {
+            data: {
+                'Aruba': null,
+                'Cancun': null,
+                'Hawaii': null,
+                'Florida': null,
+                'California': null,
+                'Jamaica': null
+            }
+        });
     </script>
 </body>
 </html>
